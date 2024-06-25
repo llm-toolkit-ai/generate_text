@@ -91,8 +91,11 @@ def anthropic_generate_text(api_key, prompt, model="claude-3-5-sonnet-20240620",
     else:
         return f"Error {response.status_code}: {response.text}"
 
-  
- def run_mistral(api_key, user_message, model="mistral-medium-latest"):
+
+import requests
+import json
+
+def run_mistral(api_key, user_message, model="mistral-medium-latest"):
     url = "https://api.mistral.ai/v1/chat/completions"
     
     headers = {
