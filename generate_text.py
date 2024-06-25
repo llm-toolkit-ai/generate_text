@@ -124,6 +124,7 @@ def run_mistral(api_key, user_message, model="mistral-medium-latest"):
     else:
         return f"Error {response.status_code}: {response.text}"
 
+
 def mistral_generate_text(api_key, prompt, model="mistral-medium-latest"):
     """
     Generates text based on a given prompt using the Mistral API.
